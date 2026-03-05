@@ -20,6 +20,9 @@
 #SBATCH --output=%x.%A_%a.out
 #SBATCH --error=%x.%A_%a.err
 
+# --- Activate environment ---
+conda activate salmon
+
 # --- Configuration: modify these paths before submitting ---
 INDEX_DIR="/path/to/salmon/index"
 INPUT_DIR="/path/to/bbduk/output"
