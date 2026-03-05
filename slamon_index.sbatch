@@ -18,6 +18,9 @@
 #SBATCH --output=%x.%j.out
 #SBATCH --error=%x.%j.err
 
+# --- Actiate envrionment ---
+conda activate salmon
+
 # --- Configuration: modify these paths before submitting ---
 REFERENCE="/path/to/reference.fa"
 OUTPUT_DIR="/path/to/salmon/index"
