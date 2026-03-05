@@ -13,6 +13,10 @@ Downloaded fastq read files were quality filtered and adapter trimmed prior to r
 
 ## Salmon-quant
 
-GTF files were converted to FASTA format using gffread (Cufflinks v2.2.1 (Trapnell et al. 2010)) to generate a Salmon transcript index, which was subsequently used to quantify short-read data, with bbduk-trimmed fastq files as input. 
+GTF files were converted to FASTA format using gffread (Cufflinks v2.2.1 (Trapnell et al. 2010)) to generate a Salmon transcript index, which was subsequently used to quantify short-read data, with bbduk-trimmed fastq files as input. Transcript per million (TPM) was found for each IL18R1 isoform using the IL18R1_quant script, changing the transcript IDs for each species. 
 
+# Long-read RNA-seq isoform quantification. 
 
+For long-read quantification, bambu v3.4.1 (se.quantonly, discovery = FALSE) was used (Chen et al. 2023). For human, mouse, and Jamaican fruit bat, all isoforms detected at the IL18R1 locus were included to enable unbiased quantification. Only isoforms with detectable expression (CPM ≥ 1) were considered; CPM values from isoforms sharing the same intact coding sequence were summed to obtain total expression for IL18R1-Long and IL18R1-Short.
+
+The filter bambu script will subset for transcripts with significant expression (>5CPM and 30%  of total locus expression). Ouput will be the transcript name, highest CPM, and corresponding tissue.   
