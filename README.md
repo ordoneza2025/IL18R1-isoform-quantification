@@ -21,4 +21,4 @@ GTF files were converted to FASTA format using gffread (Cufflinks v2.2.1 (Trapne
 
 For long-read quantification, bambu v3.4.1 (se.quantonly, discovery = FALSE) was used (Chen et al. 2023). For human, mouse, and Jamaican fruit bat, all isoforms detected at the IL18R1 locus were included to enable unbiased quantification. Only isoforms with detectable expression (CPM ≥ 1) were considered; CPM values from isoforms sharing the same intact coding sequence were summed to obtain total expression for IL18R1-Long and IL18R1-Short.
 
-The filter bambu script will subset for transcripts with significant expression (>5CPM and 30%  of total locus expression). Ouput will be the transcript name, highest CPM, and corresponding tissue. 
+The filter bambu script (IL18R1_LR_quant.sbatch) will subset for transcripts with significant expression (>5CPM and 30%  of total locus expression). Ouput will be the transcript name, highest CPM, and corresponding tissue. 
